@@ -17,19 +17,21 @@ To run the chat application locally, follow these steps:
 2. Compile and run the program
    ```sh
    $ cd ./sys-file-process-basic
-   $ gcc -o filestat filestat.c
+   $ gcc -o filestat file-new.c
    $ ./filestat 'input'
    ```
 3. Format command to implement
    ```sh
-   //Display infomation of file
-   $ ./filestat filename.txt
-   $ ./filestat folder
+   //Display infomation of file with flag -i
+   $ ./filestat -i filename.txt
+   $ ./filestat -i folder
+   $ ./filestat -i * ~/. 
+   $ // "*" character mean all file and "." character mean current directory
    
-   //Manipulate file
-   $ ./filestat create newfile.txt
-   $ ./filestat coppy newfile.txt ~/newcopyfile.c
-   $ ./filestat move newfile.txt ~/user/new-dir/newfile.txt
-   $ ./filestat delete oldfile.txt
+   //Manipulate file - with flag -m
+   $ ./filestat -m create newfile.txt
+   $ ./filestat -m coppy newfile.txt ~/newcopyfile.c
+   $ ./filestat -m move newfile.txt ~/user/new-dir/newfile.txt
+   $ ./filestat -m delete oldfile.txt
    ```
 
